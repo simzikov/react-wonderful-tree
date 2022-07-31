@@ -1,0 +1,32 @@
+{
+  "name": "react-wonderful-tree",
+  "version": "1.0.0",
+  "description": "React component for expandable, sortable, and droppable file trees",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/simzikov/react-wonderful-tree.git"
+  },
+  "keywords": [
+    "react",
+    "react.js",
+    "tree",
+    "file tree",
+    "dnd",
+    "drag and drop",
+    "upload",
+    "file upload",
+    "sortable",
+    "reorderable",
+    "wonderful"
+  ],
+  "author": "Evgenii Simzikov <simzikov@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/simzikov/react-wonderful-tree/issues"
+  },
+  "homepage": "https://github.com/simzikov/react-wonderful-tree#readme"
+}
