@@ -6,6 +6,3 @@ export { default as TreePlaceholder } from './TreePlaceholder';
 
 // Helpers
 export * from './helpers';
-
-// Types
-export { TreeData, SourceItemProps, TargetItemProps } from './types';
