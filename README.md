@@ -14,28 +14,18 @@ React component for expandable, sortable, and droppable file trees.
  ## Installation
  
  ```
- npm i @simzikov/react-wonderful-tree
+ npm i react-wonderful-tree
  ```
  
  or
  
  ```
- yarn add @simzikov/react-wonderful-tree
+ yarn add react-wonderful-tree
  ```
  
- ## Data structure
+ ## Examples
  
- ```
  
- ```
- 
- ## Usage
- 
- ```
- 
- ```
- 
- ## Props
  
  ## License
  
