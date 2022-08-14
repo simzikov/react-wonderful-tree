@@ -1,6 +1,6 @@
 {
   "name": "react-wonderful-tree",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "description": "React component for expandable, sortable, and droppable file trees",
   "keywords": [
     "react",
