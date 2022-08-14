@@ -268,7 +268,7 @@ interface DraggableProvidedProps {
 }
 ```
 
-**Description:** `dragHandleProps` includes drag handle properties. Spread those properties on a component that needs to act as a drag handle. `collapseProps` includes collapse properties. Spead those properties on a component that needs to act as a folder collapse toggle.
+**Description:** `dragHandleProps` includes drag handle properties. Spread those properties on a component that needs to act as a drag handle. `collapseProps` includes collapse properties. Spread those properties on a component that needs to act as a folder expand/collapse toggle.
 
 ### snapshot
 
