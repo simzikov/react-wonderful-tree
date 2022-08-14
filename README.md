@@ -195,6 +195,52 @@ interface TargetItemProps {
 
 **Description:** Function to run on item drop at the top level with `nestFiles` property set to `true`.
 
+## Item
+
+### item
+
+**Type:** `ItemProps`
+
+**Description:** Original item properties including arbitrarily passed `data`.
+
+### level
+
+**Type:** `number`
+
+**Description:** Nesting level of an item.
+
+### order
+
+**Type:** `number`
+
+**Description:** Order of an item starting from the top of the tree.
+
+### provided
+
+**Type:**
+
+```
+interface DraggableProvidedProps {
+  dragHandleProps: DraggableDragHandleProps;
+  collapseProps: DraggableCollapseProps;
+}
+```
+
+**Description:** `dragHandleProps` includes drag handle properties. Spread those properties on a component that needs to act as a drag handle. `collapseProps` includes collapse properties. Spread those properties on a component that needs to act as a folder expand/collapse toggle.
+
+### snapshot
+
+**Type:**
+
+```
+interface DraggableSnapshotProps {
+  isDragging: boolean;
+  isDropping: boolean;
+}
+```
+
+**Description:** `isDragging` indicates a currently dragged item. `isDropping` indicates a currently active folder that can be dropped into.
+
 ## Helpers
 
 ### collapseTreeItem
@@ -236,52 +282,6 @@ interface TargetItemProps {
 ```
 
 **Description:** Inserts new files at a given position and returns an updated `tree` object.
-
-## Item
-
-### item
-
-**Type:** `ItemProps`
-
-**Description:** Original item properties including arbitrarily passed `data`.
-
-### level
-
-**Type:** `number`
-
-**Description:** Nesting level of an item.
-
-### order
-
-**Type:** `number`
-
-**Description:** Order of an item starting from the top of the tree.
-
-### provided
-
-**Type:** `
-
-```
-interface DraggableProvidedProps {
-  dragHandleProps: DraggableDragHandleProps;
-  collapseProps: DraggableCollapseProps;
-}
-```
-
-**Description:** `dragHandleProps` includes drag handle properties. Spread those properties on a component that needs to act as a drag handle. `collapseProps` includes collapse properties. Spread those properties on a component that needs to act as a folder expand/collapse toggle.
-
-### snapshot
-
-**Type:**
-
-```
-interface DraggableSnapshotProps {
-  isDragging: boolean;
-  isDropping: boolean;
-}
-```
-
-**Description:** `isDragging` indicates a currently dragged item. `isDropping` indicates a currently active folder that can be dropped into.
 
 ## License
 
