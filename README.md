@@ -6,15 +6,15 @@ React component for expandable, sortable, and droppable file trees.
 
 ## Features
 
- * File upload support
- * Animated tree reorganization by DnD
- * Animated folder collapse/expand behavior
- * Mouse & touch support
- * Customizable node rendering
- * No opinionated styles
- 
+- File upload support
+- Animated tree reorganization by DnD
+- Animated folder collapse/expand behavior
+- Mouse & touch support
+- Customizable node rendering
+- No opinionated styles
+
 ## Installation
- 
+
 ```
 npm i react-wonderful-tree
 ```
@@ -89,19 +89,19 @@ interface ItemProps {
 
 ### itemHeight
 
-**Type** `number`
+**Type:** `number`
 
 **Description:** Item height.
 
 ### itemOffset (optional)
 
-**Type** `number`
+**Type:** `number`
 
 **Description:** Nested items offset. Set to `16` by default.
 
 ### renderItem
 
-**Type**
+**Type:**
 
 ```
 ({ item, level, order, provided, snapshot }: RenderItemProps) => React.ReactElement;
@@ -114,29 +114,30 @@ interface RenderItemProps {
   snapshot: DraggableSnapshotProps;
 }
 ```
+
 **Description:** Item rendering function.
 
 ### nestFiles (optional)
 
-**Type** `boolean`
+**Type:** `boolean`
 
 **Description:** If set to `true`, only folders will be allowed at the top level. Set to `false` by default.
 
 ### disableItemDrop (optional)
 
-**Type** `boolean`
+**Type:** `boolean`
 
 **Description:** If set to `true`, item reordering will be disabled. Set to `false` by default.
 
 ### disableFileDrop (optional)
 
-**Type** `boolean`
+**Type:** `boolean`
 
 **Description:** If set to `true`, file dropping will be disabled. Set to `false` by default.
 
 ### onItemDrop (optional)
 
-**Type**
+**Type:**
 
 ```
 (source: SourceItemProps, target: TargetItemProps) => void;
@@ -156,7 +157,7 @@ interface TargetItemProps {
 
 ### onFileDrop (optional)
 
-**Type**
+**Type:**
 
 ```
 (data: React.DragEvent<HTMLDivElement>, target: TargetItemProps) => void;
@@ -166,7 +167,7 @@ interface TargetItemProps {
 
 ### onCollapse (optional)
 
-**Type**
+**Type:**
 
 ```
 (id: string) => void;
@@ -176,7 +177,7 @@ interface TargetItemProps {
 
 ### onExpand (optional)
 
-**Type**
+**Type:**
 
 ```
 (id: string) => void;
@@ -186,7 +187,7 @@ interface TargetItemProps {
 
 ### onNestError (optional)
 
-**Type**
+**Type:**
 
 ```
 () => void;
@@ -198,7 +199,7 @@ interface TargetItemProps {
 
 ### collapseTreeItem
 
-**Type**
+**Type:**
 
 ```
 (tree: TreeData, id: string): TreeData
@@ -208,7 +209,7 @@ interface TargetItemProps {
 
 ### expandTreeItem
 
-**Type**
+**Type:**
 
 ```
 (tree: TreeData, id: string): TreeData
@@ -218,7 +219,7 @@ interface TargetItemProps {
 
 ### updateTreeItems
 
-**Type**
+**Type:**
 
 ```
 (tree: TreeData, source: SourceItemProps, target: TargetItemProps): TreeData
@@ -228,7 +229,7 @@ interface TargetItemProps {
 
 ### updateTreeFiles
 
-**Type**
+**Type:**
 
 ```
 (tree: TreeData, files: ItemProps[], target: TargetItemProps): TreeData
@@ -236,7 +237,52 @@ interface TargetItemProps {
 
 **Description:** Inserts new files at a given position and returns an updated `tree` object.
 
+## Item
+
+### item
+
+**Type:** `ItemProps`
+
+**Description:** Original item properties including arbitrarily passed `data`.
+
+### level
+
+**Type:** `number`
+
+**Description:** Nesting level of an item.
+
+### order
+
+**Type:** `number`
+
+**Description:** Order of an item starting from the top of the tree.
+
+### provided
+
+**Type:** `
+
+```
+interface DraggableProvidedProps {
+  dragHandleProps: DraggableDragHandleProps;
+  collapseProps: DraggableCollapseProps;
+}
+```
+
+**Description:** `dragHandleProps` includes drag handle properties. Spread those properties on a component that needs to act as a drag handle. `collapseProps` includes collapse properties. Spead those properties on a component that needs to act as a folder collapse toggle.
+
+### snapshot
+
+**Type:**
+
+```
+interface DraggableSnapshotProps {
+  isDragging: boolean;
+  isDropping: boolean;
+}
+```
+
+**Description:** `isDragging` indicates a currently dragged item. `isDropping` indicates a currently active folder that can be dropped into.
+
 ## License
 
 MIT
-
