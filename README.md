@@ -31,7 +31,7 @@ yarn add react-wonderful-tree
 const tree = {
   items: {
     apple: {
-      id: 'appple,
+      id: 'apple,
       data: { title: 'Apple' }
     },
     fruits: {
